@@ -1,0 +1,439 @@
+[debug] [2020-10-08T15:27:24.433Z] ----------------------------------------------------------------------
+[debug] [2020-10-08T15:27:24.435Z] Command:       /home/john/.nvm/versions/node/v10.21.0/bin/node /home/john/security-assessment/functions/node_modules/.bin/firebase functions:shell
+[debug] [2020-10-08T15:27:24.435Z] CLI Version:   8.4.2
+[debug] [2020-10-08T15:27:24.436Z] Platform:      linux
+[debug] [2020-10-08T15:27:24.436Z] Node Version:  v10.21.0
+[debug] [2020-10-08T15:27:24.436Z] Time:          Thu Oct 08 2020 16:27:24 GMT+0100 (British Summer Time)
+[debug] [2020-10-08T15:27:24.436Z] ----------------------------------------------------------------------
+[debug] [2020-10-08T15:27:24.436Z] 
+[debug] [2020-10-08T15:27:24.449Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-08T15:27:24.450Z] > authorizing via signed-in user
+[debug] [2020-10-08T15:27:24.450Z] [iam] checking project security-assessment-837c6 for permissions ["firebase.projects.get"]
+[debug] [2020-10-08T15:27:24.452Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-08T15:27:24.452Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-10-08T15:27:24.581Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 08 Oct 2020 15:27:24 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-08T15:27:24.600Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/security-assessment-837c6:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-10-08T15:27:25.205Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 08 Oct 2020 15:27:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=549","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"8\" doesn't match your global version \"10\""}}
+[debug] [2020-10-08T15:27:25.235Z] [functions] Watching "/home/john/security-assessment/functions" for Cloud Functions...
+[debug] [2020-10-08T15:27:25.251Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T15:27:25.252Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-10-08T15:27:25.252Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T15:27:25.253Z] DEBUG: [worker-~diagnostic~-f882b001-1b1a-40ce-a36a-b101a686ae8a]: Assigning socketPath: /tmp/fire_emu_10002.sock
+[debug] [2020-10-08T15:27:25.254Z] DEBUG: [worker-~diagnostic~-f882b001-1b1a-40ce-a36a-b101a686ae8a]: BUSY
+[debug] [2020-10-08T15:27:25.608Z] DEBUG: [runtime-status] [10002] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T15:27:25.610Z] DEBUG: [runtime-status] [10002] Disabled runtime features: undefined
+[debug] [2020-10-08T15:27:25.612Z] DEBUG: [runtime-status] [10002] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T15:27:25.613Z] DEBUG: [runtime-status] [10002] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:27:25.618Z] DEBUG: [runtime-status] [10002] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T15:27:25.619Z] DEBUG: [runtime-status] [10002] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:27:25.657Z] DEBUG: [runtime-status] [10002] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T15:27:25.658Z] DEBUG: [runtime-status] [10002] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T15:27:25.659Z] DEBUG: [runtime-status] [10002] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:27:25.661Z] DEBUG: [runtime-status] [10002] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T15:27:25.662Z] DEBUG: [runtime-status] [10002] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:27:25.662Z] DEBUG: [runtime-status] [10002] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T15:27:25.671Z] DEBUG: [runtime-status] [10002] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T15:27:26.102Z] [functions[sendEmailConfirmation]] function ignored because the database emulator does not exist or is not running.
+[debug] [2020-10-08T15:27:26.102Z] [functions[sendEmailConfirmationSecurity]] function ignored because the database emulator does not exist or is not running.
+[info] i  functions: Loaded functions: sendEmailConfirmation, sendEmailConfirmationSecurity 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub 
+[debug] [2020-10-08T15:27:26.121Z] DEBUG: [worker-~diagnostic~-f882b001-1b1a-40ce-a36a-b101a686ae8a]: IDLE
+[debug] [2020-10-08T15:40:55.291Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T15:40:56.293Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T15:40:56.294Z] DEBUG: [worker-~diagnostic~-f882b001-1b1a-40ce-a36a-b101a686ae8a]: FINISHING
+[debug] [2020-10-08T15:40:56.307Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T15:40:56.307Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T15:40:56.307Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T15:40:56.307Z] DEBUG: [worker-~diagnostic~-555be76d-ec4d-428a-875a-0759b3d085a7]: Assigning socketPath: /tmp/fire_emu_10509.sock
+[debug] [2020-10-08T15:40:56.308Z] DEBUG: [worker-~diagnostic~-555be76d-ec4d-428a-875a-0759b3d085a7]: BUSY
+[debug] [2020-10-08T15:40:56.311Z] DEBUG: [worker-~diagnostic~-f882b001-1b1a-40ce-a36a-b101a686ae8a]: exited
+[debug] [2020-10-08T15:40:56.311Z] DEBUG: [worker-~diagnostic~-f882b001-1b1a-40ce-a36a-b101a686ae8a]: FINISHED
+[debug] [2020-10-08T15:40:56.616Z] DEBUG: [runtime-status] [10509] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T15:40:56.619Z] DEBUG: [runtime-status] [10509] Disabled runtime features: undefined
+[debug] [2020-10-08T15:40:56.621Z] DEBUG: [runtime-status] [10509] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T15:40:56.622Z] DEBUG: [runtime-status] [10509] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:40:56.627Z] DEBUG: [runtime-status] [10509] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T15:40:56.630Z] DEBUG: [runtime-status] [10509] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:40:56.649Z] DEBUG: [runtime-status] [10509] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T15:40:56.649Z] DEBUG: [runtime-status] [10509] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T15:40:56.650Z] DEBUG: [runtime-status] [10509] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:40:56.652Z] DEBUG: [runtime-status] [10509] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T15:40:56.652Z] DEBUG: [runtime-status] [10509] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T15:40:56.653Z] DEBUG: [runtime-status] [10509] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T15:40:56.659Z] DEBUG: [runtime-status] [10509] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T15:40:56.869Z] DEBUG: [worker-~diagnostic~-555be76d-ec4d-428a-875a-0759b3d085a7]: IDLE
+[debug] [2020-10-08T16:51:47.291Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T16:51:48.292Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T16:51:48.292Z] DEBUG: [worker-~diagnostic~-555be76d-ec4d-428a-875a-0759b3d085a7]: FINISHING
+[debug] [2020-10-08T16:51:48.292Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T16:51:48.301Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T16:51:48.301Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T16:51:48.301Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T16:51:48.301Z] DEBUG: [worker-~diagnostic~-373ebf37-f55d-415f-b828-e98c18524a58]: Assigning socketPath: /tmp/fire_emu_14222.sock
+[debug] [2020-10-08T16:51:48.301Z] DEBUG: [worker-~diagnostic~-373ebf37-f55d-415f-b828-e98c18524a58]: BUSY
+[debug] [2020-10-08T16:51:48.304Z] DEBUG: [worker-~diagnostic~-555be76d-ec4d-428a-875a-0759b3d085a7]: exited
+[debug] [2020-10-08T16:51:48.304Z] DEBUG: [worker-~diagnostic~-555be76d-ec4d-428a-875a-0759b3d085a7]: FINISHED
+[debug] [2020-10-08T16:51:48.676Z] DEBUG: [runtime-status] [14222] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T16:51:48.680Z] DEBUG: [runtime-status] [14222] Disabled runtime features: undefined
+[debug] [2020-10-08T16:51:48.684Z] DEBUG: [runtime-status] [14222] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T16:51:48.685Z] DEBUG: [runtime-status] [14222] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:51:48.692Z] DEBUG: [runtime-status] [14222] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T16:51:48.695Z] DEBUG: [runtime-status] [14222] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:51:48.717Z] DEBUG: [runtime-status] [14222] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T16:51:48.718Z] DEBUG: [runtime-status] [14222] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T16:51:48.719Z] DEBUG: [runtime-status] [14222] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:51:48.721Z] DEBUG: [runtime-status] [14222] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T16:51:48.721Z] DEBUG: [runtime-status] [14222] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:51:48.722Z] DEBUG: [runtime-status] [14222] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T16:51:48.727Z] DEBUG: [runtime-status] [14222] Error in handleMessage: {"frb":{"cwd":"/home/john/security-assessment/functions","projectId":"security-assessment-837c6","triggerId":"","emulators":{},"socketPath":"/tmp/fire_emu_14222.sock"},"opts":{"nodeBinary":"/home/john/.nvm/versions/node/v10.21.0/bin/node"}} => Error: Cannot find module './tsconfig.json': Error: Cannot find module './tsconfig.json'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.resolve (internal/modules/cjs/helpers.js:33:19)
+    at requireAsync (/home/john/security-assessment/functions/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:33:44)
+    at /home/john/security-assessment/functions/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:566:33
+    at Generator.next (<anonymous>)
+    at /home/john/security-assessment/functions/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/john/security-assessment/functions/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:12)
+    at moduleResolutionDetective (/home/john/security-assessment/functions/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:564:12)
+    at /home/john/security-assessment/functions/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:653:23
+[warn] ⚠  functions: Cannot find module './tsconfig.json' {"metadata":{"emulator":{"name":"functions"},"message":"Cannot find module './tsconfig.json'"}}
+[warn] ⚠  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2020-10-08T16:51:48.733Z] DEBUG: [worker-~diagnostic~-373ebf37-f55d-415f-b828-e98c18524a58]: exited
+[debug] [2020-10-08T16:51:48.733Z] DEBUG: [worker-~diagnostic~-373ebf37-f55d-415f-b828-e98c18524a58]: FINISHED
+[debug] [2020-10-08T16:53:06.939Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T16:53:07.940Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 0
+[debug] [2020-10-08T16:53:07.951Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T16:53:07.951Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-10-08T16:53:07.951Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T16:53:07.952Z] DEBUG: [worker-~diagnostic~-0de65a2a-cf0d-4ac6-b661-d2b08f6fee16]: Assigning socketPath: /tmp/fire_emu_14271.sock
+[debug] [2020-10-08T16:53:07.952Z] DEBUG: [worker-~diagnostic~-0de65a2a-cf0d-4ac6-b661-d2b08f6fee16]: BUSY
+[debug] [2020-10-08T16:53:08.353Z] DEBUG: [runtime-status] [14271] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T16:53:08.357Z] DEBUG: [runtime-status] [14271] Disabled runtime features: undefined
+[debug] [2020-10-08T16:53:08.362Z] DEBUG: [runtime-status] [14271] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T16:53:08.365Z] DEBUG: [runtime-status] [14271] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:53:08.370Z] DEBUG: [runtime-status] [14271] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T16:53:08.377Z] DEBUG: [runtime-status] [14271] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:53:08.398Z] DEBUG: [runtime-status] [14271] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T16:53:08.399Z] DEBUG: [runtime-status] [14271] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T16:53:08.400Z] DEBUG: [runtime-status] [14271] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:53:08.402Z] DEBUG: [runtime-status] [14271] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T16:53:08.402Z] DEBUG: [runtime-status] [14271] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T16:53:08.403Z] DEBUG: [runtime-status] [14271] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T16:53:08.413Z] DEBUG: [runtime-status] [14271] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T16:53:08.774Z] DEBUG: [worker-~diagnostic~-0de65a2a-cf0d-4ac6-b661-d2b08f6fee16]: IDLE
+[debug] [2020-10-08T19:42:07.687Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T19:42:08.688Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T19:42:08.688Z] DEBUG: [worker-~diagnostic~-0de65a2a-cf0d-4ac6-b661-d2b08f6fee16]: FINISHING
+[debug] [2020-10-08T19:42:08.702Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T19:42:08.702Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T19:42:08.702Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T19:42:08.702Z] DEBUG: [worker-~diagnostic~-c80efd35-e3ac-44ea-9d45-3817059be46a]: Assigning socketPath: /tmp/fire_emu_18819.sock
+[debug] [2020-10-08T19:42:08.702Z] DEBUG: [worker-~diagnostic~-c80efd35-e3ac-44ea-9d45-3817059be46a]: BUSY
+[debug] [2020-10-08T19:42:08.704Z] DEBUG: [worker-~diagnostic~-0de65a2a-cf0d-4ac6-b661-d2b08f6fee16]: exited
+[debug] [2020-10-08T19:42:08.705Z] DEBUG: [worker-~diagnostic~-0de65a2a-cf0d-4ac6-b661-d2b08f6fee16]: FINISHED
+[debug] [2020-10-08T19:42:09.017Z] DEBUG: [runtime-status] [18819] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T19:42:09.019Z] DEBUG: [runtime-status] [18819] Disabled runtime features: undefined
+[debug] [2020-10-08T19:42:09.021Z] DEBUG: [runtime-status] [18819] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T19:42:09.023Z] DEBUG: [runtime-status] [18819] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:42:09.027Z] DEBUG: [runtime-status] [18819] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T19:42:09.029Z] DEBUG: [runtime-status] [18819] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:42:09.048Z] DEBUG: [runtime-status] [18819] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T19:42:09.048Z] DEBUG: [runtime-status] [18819] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T19:42:09.049Z] DEBUG: [runtime-status] [18819] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:42:09.051Z] DEBUG: [runtime-status] [18819] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T19:42:09.052Z] DEBUG: [runtime-status] [18819] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:42:09.052Z] DEBUG: [runtime-status] [18819] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T19:42:09.058Z] DEBUG: [runtime-status] [18819] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T19:42:09.267Z] DEBUG: [worker-~diagnostic~-c80efd35-e3ac-44ea-9d45-3817059be46a]: IDLE
+[debug] [2020-10-08T19:54:17.413Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T19:54:18.414Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T19:54:18.414Z] DEBUG: [worker-~diagnostic~-c80efd35-e3ac-44ea-9d45-3817059be46a]: FINISHING
+[debug] [2020-10-08T19:54:18.414Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T19:54:18.428Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T19:54:18.428Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T19:54:18.428Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T19:54:18.428Z] DEBUG: [worker-~diagnostic~-e12e369b-d5f6-4594-9403-b898a949c32d]: Assigning socketPath: /tmp/fire_emu_19417.sock
+[debug] [2020-10-08T19:54:18.429Z] DEBUG: [worker-~diagnostic~-e12e369b-d5f6-4594-9403-b898a949c32d]: BUSY
+[debug] [2020-10-08T19:54:18.430Z] DEBUG: [worker-~diagnostic~-c80efd35-e3ac-44ea-9d45-3817059be46a]: exited
+[debug] [2020-10-08T19:54:18.430Z] DEBUG: [worker-~diagnostic~-c80efd35-e3ac-44ea-9d45-3817059be46a]: FINISHED
+[debug] [2020-10-08T19:54:18.820Z] DEBUG: [runtime-status] [19417] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T19:54:18.822Z] DEBUG: [runtime-status] [19417] Disabled runtime features: undefined
+[debug] [2020-10-08T19:54:18.824Z] DEBUG: [runtime-status] [19417] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T19:54:18.828Z] DEBUG: [runtime-status] [19417] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:54:18.835Z] DEBUG: [runtime-status] [19417] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T19:54:18.836Z] DEBUG: [runtime-status] [19417] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:54:18.866Z] DEBUG: [runtime-status] [19417] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T19:54:18.867Z] DEBUG: [runtime-status] [19417] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T19:54:18.871Z] DEBUG: [runtime-status] [19417] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:54:18.871Z] DEBUG: [runtime-status] [19417] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T19:54:18.871Z] DEBUG: [runtime-status] [19417] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T19:54:18.871Z] DEBUG: [runtime-status] [19417] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T19:54:18.879Z] DEBUG: [runtime-status] [19417] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T19:54:19.150Z] DEBUG: [worker-~diagnostic~-e12e369b-d5f6-4594-9403-b898a949c32d]: IDLE
+[debug] [2020-10-08T20:00:49.606Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:00:50.607Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:00:50.607Z] DEBUG: [worker-~diagnostic~-e12e369b-d5f6-4594-9403-b898a949c32d]: FINISHING
+[debug] [2020-10-08T20:00:50.608Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:00:50.621Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:00:50.621Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:00:50.621Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:00:50.621Z] DEBUG: [worker-~diagnostic~-469cd9ee-b239-432d-8a27-0b685bbb845e]: Assigning socketPath: /tmp/fire_emu_19623.sock
+[debug] [2020-10-08T20:00:50.621Z] DEBUG: [worker-~diagnostic~-469cd9ee-b239-432d-8a27-0b685bbb845e]: BUSY
+[debug] [2020-10-08T20:00:50.624Z] DEBUG: [worker-~diagnostic~-e12e369b-d5f6-4594-9403-b898a949c32d]: exited
+[debug] [2020-10-08T20:00:50.624Z] DEBUG: [worker-~diagnostic~-e12e369b-d5f6-4594-9403-b898a949c32d]: FINISHED
+[debug] [2020-10-08T20:00:50.931Z] DEBUG: [runtime-status] [19623] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:00:50.934Z] DEBUG: [runtime-status] [19623] Disabled runtime features: undefined
+[debug] [2020-10-08T20:00:50.936Z] DEBUG: [runtime-status] [19623] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:00:50.937Z] DEBUG: [runtime-status] [19623] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:00:50.942Z] DEBUG: [runtime-status] [19623] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:00:50.945Z] DEBUG: [runtime-status] [19623] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:00:50.961Z] DEBUG: [runtime-status] [19623] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:00:50.961Z] DEBUG: [runtime-status] [19623] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:00:50.962Z] DEBUG: [runtime-status] [19623] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:00:50.963Z] DEBUG: [runtime-status] [19623] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:00:50.963Z] DEBUG: [runtime-status] [19623] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:00:50.963Z] DEBUG: [runtime-status] [19623] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:00:50.971Z] DEBUG: [runtime-status] [19623] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:00:51.198Z] DEBUG: [worker-~diagnostic~-469cd9ee-b239-432d-8a27-0b685bbb845e]: IDLE
+[debug] [2020-10-08T20:03:10.277Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:03:11.278Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:03:11.282Z] DEBUG: [worker-~diagnostic~-469cd9ee-b239-432d-8a27-0b685bbb845e]: FINISHING
+[debug] [2020-10-08T20:03:11.282Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:03:11.296Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:03:11.296Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:03:11.296Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:03:11.297Z] DEBUG: [worker-~diagnostic~-7f352670-3abf-495d-a613-c93b0231fc89]: Assigning socketPath: /tmp/fire_emu_19670.sock
+[debug] [2020-10-08T20:03:11.297Z] DEBUG: [worker-~diagnostic~-7f352670-3abf-495d-a613-c93b0231fc89]: BUSY
+[debug] [2020-10-08T20:03:11.299Z] DEBUG: [worker-~diagnostic~-469cd9ee-b239-432d-8a27-0b685bbb845e]: exited
+[debug] [2020-10-08T20:03:11.299Z] DEBUG: [worker-~diagnostic~-469cd9ee-b239-432d-8a27-0b685bbb845e]: FINISHED
+[debug] [2020-10-08T20:03:11.609Z] DEBUG: [runtime-status] [19670] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:03:11.611Z] DEBUG: [runtime-status] [19670] Disabled runtime features: undefined
+[debug] [2020-10-08T20:03:11.613Z] DEBUG: [runtime-status] [19670] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:03:11.614Z] DEBUG: [runtime-status] [19670] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:03:11.619Z] DEBUG: [runtime-status] [19670] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:03:11.621Z] DEBUG: [runtime-status] [19670] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:03:11.637Z] DEBUG: [runtime-status] [19670] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:03:11.638Z] DEBUG: [runtime-status] [19670] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:03:11.638Z] DEBUG: [runtime-status] [19670] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:03:11.640Z] DEBUG: [runtime-status] [19670] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:03:11.640Z] DEBUG: [runtime-status] [19670] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:03:11.640Z] DEBUG: [runtime-status] [19670] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:03:11.647Z] DEBUG: [runtime-status] [19670] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:03:11.876Z] DEBUG: [worker-~diagnostic~-7f352670-3abf-495d-a613-c93b0231fc89]: IDLE
+[debug] [2020-10-08T20:04:12.179Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:04:13.180Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:04:13.180Z] DEBUG: [worker-~diagnostic~-7f352670-3abf-495d-a613-c93b0231fc89]: FINISHING
+[debug] [2020-10-08T20:04:13.180Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:04:13.194Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:04:13.194Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:04:13.194Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:04:13.194Z] DEBUG: [worker-~diagnostic~-f19809e6-a443-4ee5-bff6-a578d6582a5c]: Assigning socketPath: /tmp/fire_emu_19728.sock
+[debug] [2020-10-08T20:04:13.194Z] DEBUG: [worker-~diagnostic~-f19809e6-a443-4ee5-bff6-a578d6582a5c]: BUSY
+[debug] [2020-10-08T20:04:13.197Z] DEBUG: [worker-~diagnostic~-7f352670-3abf-495d-a613-c93b0231fc89]: exited
+[debug] [2020-10-08T20:04:13.198Z] DEBUG: [worker-~diagnostic~-7f352670-3abf-495d-a613-c93b0231fc89]: FINISHED
+[debug] [2020-10-08T20:04:13.552Z] DEBUG: [runtime-status] [19728] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:04:13.556Z] DEBUG: [runtime-status] [19728] Disabled runtime features: undefined
+[debug] [2020-10-08T20:04:13.559Z] DEBUG: [runtime-status] [19728] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:04:13.560Z] DEBUG: [runtime-status] [19728] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:04:13.565Z] DEBUG: [runtime-status] [19728] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:04:13.567Z] DEBUG: [runtime-status] [19728] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:04:13.593Z] DEBUG: [runtime-status] [19728] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:04:13.593Z] DEBUG: [runtime-status] [19728] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:04:13.594Z] DEBUG: [runtime-status] [19728] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:04:13.595Z] DEBUG: [runtime-status] [19728] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:04:13.595Z] DEBUG: [runtime-status] [19728] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:04:13.595Z] DEBUG: [runtime-status] [19728] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:04:13.604Z] DEBUG: [runtime-status] [19728] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:04:13.867Z] DEBUG: [worker-~diagnostic~-f19809e6-a443-4ee5-bff6-a578d6582a5c]: IDLE
+[debug] [2020-10-08T20:08:32.738Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:08:33.738Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:08:33.738Z] DEBUG: [worker-~diagnostic~-f19809e6-a443-4ee5-bff6-a578d6582a5c]: FINISHING
+[debug] [2020-10-08T20:08:33.739Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:08:33.752Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:08:33.752Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:08:33.752Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:08:33.753Z] DEBUG: [worker-~diagnostic~-595d8cab-a921-467c-86e6-87311772429a]: Assigning socketPath: /tmp/fire_emu_20014.sock
+[debug] [2020-10-08T20:08:33.753Z] DEBUG: [worker-~diagnostic~-595d8cab-a921-467c-86e6-87311772429a]: BUSY
+[debug] [2020-10-08T20:08:33.754Z] DEBUG: [worker-~diagnostic~-f19809e6-a443-4ee5-bff6-a578d6582a5c]: exited
+[debug] [2020-10-08T20:08:33.754Z] DEBUG: [worker-~diagnostic~-f19809e6-a443-4ee5-bff6-a578d6582a5c]: FINISHED
+[debug] [2020-10-08T20:08:34.075Z] DEBUG: [runtime-status] [20014] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:08:34.077Z] DEBUG: [runtime-status] [20014] Disabled runtime features: undefined
+[debug] [2020-10-08T20:08:34.080Z] DEBUG: [runtime-status] [20014] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:08:34.081Z] DEBUG: [runtime-status] [20014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:08:34.086Z] DEBUG: [runtime-status] [20014] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:08:34.092Z] DEBUG: [runtime-status] [20014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:08:34.115Z] DEBUG: [runtime-status] [20014] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:08:34.115Z] DEBUG: [runtime-status] [20014] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:08:34.117Z] DEBUG: [runtime-status] [20014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:08:34.118Z] DEBUG: [runtime-status] [20014] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:08:34.118Z] DEBUG: [runtime-status] [20014] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:08:34.119Z] DEBUG: [runtime-status] [20014] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:08:34.127Z] DEBUG: [runtime-status] [20014] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:08:34.340Z] DEBUG: [worker-~diagnostic~-595d8cab-a921-467c-86e6-87311772429a]: IDLE
+[debug] [2020-10-08T20:15:16.068Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:15:17.069Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:15:17.069Z] DEBUG: [worker-~diagnostic~-595d8cab-a921-467c-86e6-87311772429a]: FINISHING
+[debug] [2020-10-08T20:15:17.070Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:15:17.084Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:15:17.084Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:15:17.084Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:15:17.084Z] DEBUG: [worker-~diagnostic~-7658475d-3473-414d-a3f6-a31d5ee8554c]: Assigning socketPath: /tmp/fire_emu_20254.sock
+[debug] [2020-10-08T20:15:17.084Z] DEBUG: [worker-~diagnostic~-7658475d-3473-414d-a3f6-a31d5ee8554c]: BUSY
+[debug] [2020-10-08T20:15:17.086Z] DEBUG: [worker-~diagnostic~-595d8cab-a921-467c-86e6-87311772429a]: exited
+[debug] [2020-10-08T20:15:17.086Z] DEBUG: [worker-~diagnostic~-595d8cab-a921-467c-86e6-87311772429a]: FINISHED
+[debug] [2020-10-08T20:15:17.406Z] DEBUG: [runtime-status] [20254] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:15:17.408Z] DEBUG: [runtime-status] [20254] Disabled runtime features: undefined
+[debug] [2020-10-08T20:15:17.410Z] DEBUG: [runtime-status] [20254] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:15:17.411Z] DEBUG: [runtime-status] [20254] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:15:17.416Z] DEBUG: [runtime-status] [20254] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:15:17.417Z] DEBUG: [runtime-status] [20254] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:15:17.437Z] DEBUG: [runtime-status] [20254] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:15:17.438Z] DEBUG: [runtime-status] [20254] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:15:17.439Z] DEBUG: [runtime-status] [20254] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:15:17.441Z] DEBUG: [runtime-status] [20254] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:15:17.441Z] DEBUG: [runtime-status] [20254] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:15:17.441Z] DEBUG: [runtime-status] [20254] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:15:17.448Z] DEBUG: [runtime-status] [20254] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:15:17.676Z] DEBUG: [worker-~diagnostic~-7658475d-3473-414d-a3f6-a31d5ee8554c]: IDLE
+[debug] [2020-10-08T20:27:00.128Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:27:01.129Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:27:01.129Z] DEBUG: [worker-~diagnostic~-7658475d-3473-414d-a3f6-a31d5ee8554c]: FINISHING
+[debug] [2020-10-08T20:27:01.129Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:27:01.138Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:27:01.138Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:27:01.138Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:27:01.138Z] DEBUG: [worker-~diagnostic~-f8614039-cc1f-4b19-a434-26ae77682b6b]: Assigning socketPath: /tmp/fire_emu_20529.sock
+[debug] [2020-10-08T20:27:01.138Z] DEBUG: [worker-~diagnostic~-f8614039-cc1f-4b19-a434-26ae77682b6b]: BUSY
+[debug] [2020-10-08T20:27:01.140Z] DEBUG: [worker-~diagnostic~-7658475d-3473-414d-a3f6-a31d5ee8554c]: exited
+[debug] [2020-10-08T20:27:01.140Z] DEBUG: [worker-~diagnostic~-7658475d-3473-414d-a3f6-a31d5ee8554c]: FINISHED
+[debug] [2020-10-08T20:27:01.492Z] DEBUG: [runtime-status] [20529] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:27:01.495Z] DEBUG: [runtime-status] [20529] Disabled runtime features: undefined
+[debug] [2020-10-08T20:27:01.498Z] DEBUG: [runtime-status] [20529] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:27:01.499Z] DEBUG: [runtime-status] [20529] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:27:01.504Z] DEBUG: [runtime-status] [20529] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:27:01.506Z] DEBUG: [runtime-status] [20529] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:27:01.531Z] DEBUG: [runtime-status] [20529] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:27:01.532Z] DEBUG: [runtime-status] [20529] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:27:01.532Z] DEBUG: [runtime-status] [20529] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:27:01.533Z] DEBUG: [runtime-status] [20529] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:27:01.534Z] DEBUG: [runtime-status] [20529] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:27:01.534Z] DEBUG: [runtime-status] [20529] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:27:01.542Z] DEBUG: [runtime-status] [20529] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:27:01.791Z] DEBUG: [worker-~diagnostic~-f8614039-cc1f-4b19-a434-26ae77682b6b]: IDLE
+[debug] [2020-10-08T20:39:27.077Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:39:28.078Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:39:28.078Z] DEBUG: [worker-~diagnostic~-f8614039-cc1f-4b19-a434-26ae77682b6b]: FINISHING
+[debug] [2020-10-08T20:39:28.078Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:39:28.093Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:39:28.094Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:39:28.094Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:39:28.094Z] DEBUG: [worker-~diagnostic~-b8616cb3-7bc6-479c-8663-39488e363978]: Assigning socketPath: /tmp/fire_emu_20931.sock
+[debug] [2020-10-08T20:39:28.094Z] DEBUG: [worker-~diagnostic~-b8616cb3-7bc6-479c-8663-39488e363978]: BUSY
+[debug] [2020-10-08T20:39:28.096Z] DEBUG: [worker-~diagnostic~-f8614039-cc1f-4b19-a434-26ae77682b6b]: exited
+[debug] [2020-10-08T20:39:28.097Z] DEBUG: [worker-~diagnostic~-f8614039-cc1f-4b19-a434-26ae77682b6b]: FINISHED
+[debug] [2020-10-08T20:39:28.454Z] DEBUG: [runtime-status] [20931] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:39:28.457Z] DEBUG: [runtime-status] [20931] Disabled runtime features: undefined
+[debug] [2020-10-08T20:39:28.461Z] DEBUG: [runtime-status] [20931] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:39:28.463Z] DEBUG: [runtime-status] [20931] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:39:28.468Z] DEBUG: [runtime-status] [20931] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:39:28.472Z] DEBUG: [runtime-status] [20931] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:39:28.496Z] DEBUG: [runtime-status] [20931] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:39:28.497Z] DEBUG: [runtime-status] [20931] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:39:28.498Z] DEBUG: [runtime-status] [20931] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:39:28.499Z] DEBUG: [runtime-status] [20931] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:39:28.499Z] DEBUG: [runtime-status] [20931] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:39:28.499Z] DEBUG: [runtime-status] [20931] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:39:28.508Z] DEBUG: [runtime-status] [20931] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:39:28.741Z] DEBUG: [worker-~diagnostic~-b8616cb3-7bc6-479c-8663-39488e363978]: IDLE
+[debug] [2020-10-08T20:49:19.851Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:49:20.852Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:49:20.853Z] DEBUG: [worker-~diagnostic~-b8616cb3-7bc6-479c-8663-39488e363978]: FINISHING
+[debug] [2020-10-08T20:49:20.853Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:49:20.866Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:49:20.866Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:49:20.866Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:49:20.866Z] DEBUG: [worker-~diagnostic~-29a46e1a-a8c9-4d34-9366-46870d56dac7]: Assigning socketPath: /tmp/fire_emu_21264.sock
+[debug] [2020-10-08T20:49:20.866Z] DEBUG: [worker-~diagnostic~-29a46e1a-a8c9-4d34-9366-46870d56dac7]: BUSY
+[debug] [2020-10-08T20:49:20.867Z] DEBUG: [worker-~diagnostic~-b8616cb3-7bc6-479c-8663-39488e363978]: exited
+[debug] [2020-10-08T20:49:20.867Z] DEBUG: [worker-~diagnostic~-b8616cb3-7bc6-479c-8663-39488e363978]: FINISHED
+[debug] [2020-10-08T20:49:21.172Z] DEBUG: [runtime-status] [21264] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:49:21.174Z] DEBUG: [runtime-status] [21264] Disabled runtime features: undefined
+[debug] [2020-10-08T20:49:21.177Z] DEBUG: [runtime-status] [21264] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:49:21.178Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:49:21.183Z] DEBUG: [runtime-status] [21264] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:49:21.184Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:49:21.203Z] DEBUG: [runtime-status] [21264] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:49:21.203Z] DEBUG: [runtime-status] [21264] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:49:21.204Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:49:21.205Z] DEBUG: [runtime-status] [21264] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:49:21.205Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:49:21.206Z] DEBUG: [runtime-status] [21264] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:49:21.213Z] DEBUG: [runtime-status] [21264] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:49:21.430Z] DEBUG: [worker-~diagnostic~-29a46e1a-a8c9-4d34-9366-46870d56dac7]: IDLE
+[debug] [2020-10-08T20:51:42.819Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:51:43.820Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:51:43.821Z] DEBUG: [worker-~diagnostic~-29a46e1a-a8c9-4d34-9366-46870d56dac7]: FINISHING
+[debug] [2020-10-08T20:51:43.821Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:51:43.835Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:51:43.836Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:51:43.836Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:51:43.836Z] DEBUG: [worker-~diagnostic~-41ad8959-621d-4325-b5ac-75598852e339]: Assigning socketPath: /tmp/fire_emu_21294.sock
+[debug] [2020-10-08T20:51:43.836Z] DEBUG: [worker-~diagnostic~-41ad8959-621d-4325-b5ac-75598852e339]: BUSY
+[debug] [2020-10-08T20:51:43.837Z] DEBUG: [worker-~diagnostic~-29a46e1a-a8c9-4d34-9366-46870d56dac7]: exited
+[debug] [2020-10-08T20:51:43.837Z] DEBUG: [worker-~diagnostic~-29a46e1a-a8c9-4d34-9366-46870d56dac7]: FINISHED
+[debug] [2020-10-08T20:51:44.154Z] DEBUG: [runtime-status] [21294] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:51:44.157Z] DEBUG: [runtime-status] [21294] Disabled runtime features: undefined
+[debug] [2020-10-08T20:51:44.160Z] DEBUG: [runtime-status] [21294] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:51:44.162Z] DEBUG: [runtime-status] [21294] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:51:44.167Z] DEBUG: [runtime-status] [21294] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:51:44.169Z] DEBUG: [runtime-status] [21294] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:51:44.195Z] DEBUG: [runtime-status] [21294] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:51:44.195Z] DEBUG: [runtime-status] [21294] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:51:44.196Z] DEBUG: [runtime-status] [21294] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:51:44.198Z] DEBUG: [runtime-status] [21294] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:51:44.198Z] DEBUG: [runtime-status] [21294] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:51:44.198Z] DEBUG: [runtime-status] [21294] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:51:44.206Z] DEBUG: [runtime-status] [21294] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:51:44.420Z] DEBUG: [worker-~diagnostic~-41ad8959-621d-4325-b5ac-75598852e339]: IDLE
+[debug] [2020-10-08T20:52:53.424Z] DEBUG: File /home/john/security-assessment/functions/index.js changed, reloading triggers
+[debug] [2020-10-08T20:52:54.425Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-10-08T20:52:54.426Z] DEBUG: [worker-~diagnostic~-41ad8959-621d-4325-b5ac-75598852e339]: FINISHING
+[debug] [2020-10-08T20:52:54.426Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-10-08T20:52:54.442Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-10-08T20:52:54.442Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-10-08T20:52:54.443Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-10-08T20:52:54.443Z] DEBUG: [worker-~diagnostic~-ca32d19b-c0e2-41e8-885f-9ee130e98bfb]: Assigning socketPath: /tmp/fire_emu_21317.sock
+[debug] [2020-10-08T20:52:54.443Z] DEBUG: [worker-~diagnostic~-ca32d19b-c0e2-41e8-885f-9ee130e98bfb]: BUSY
+[debug] [2020-10-08T20:52:54.446Z] DEBUG: [worker-~diagnostic~-41ad8959-621d-4325-b5ac-75598852e339]: exited
+[debug] [2020-10-08T20:52:54.446Z] DEBUG: [worker-~diagnostic~-41ad8959-621d-4325-b5ac-75598852e339]: FINISHED
+[debug] [2020-10-08T20:52:54.826Z] DEBUG: [runtime-status] [21317] Functions runtime initialized. {"cwd":"/home/john/security-assessment/functions","node_version":"10.21.0"}
+[debug] [2020-10-08T20:52:54.830Z] DEBUG: [runtime-status] [21317] Disabled runtime features: undefined
+[debug] [2020-10-08T20:52:54.833Z] DEBUG: [runtime-status] [21317] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:52:54.835Z] DEBUG: [runtime-status] [21317] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:52:54.841Z] DEBUG: [runtime-status] [21317] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-10-08T20:52:54.842Z] DEBUG: [runtime-status] [21317] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:52:54.862Z] DEBUG: [runtime-status] [21317] Checked functions.config() {"config":{}}
+[debug] [2020-10-08T20:52:54.862Z] DEBUG: [runtime-status] [21317] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2020-10-08T20:52:54.863Z] DEBUG: [runtime-status] [21317] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:52:54.864Z] DEBUG: [runtime-status] [21317] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-10-08T20:52:54.864Z] DEBUG: [runtime-status] [21317] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/john/security-assessment/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-10-08T20:52:54.865Z] DEBUG: [runtime-status] [21317] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.9.2","resolution":"/home/john/security-assessment/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-10-08T20:52:54.873Z] DEBUG: [runtime-status] [21317] initializeApp(DEFAULT) {"databaseURL":"https://security-assessment-837c6.firebaseio.com","storageBucket":"security-assessment-837c6.appspot.com","projectId":"security-assessment-837c6"}
+[debug] [2020-10-08T20:52:55.117Z] DEBUG: [worker-~diagnostic~-ca32d19b-c0e2-41e8-885f-9ee130e98bfb]: IDLE
+[debug] [2021-06-30T15:12:18.731Z] ----------------------------------------------------------------------
+[debug] [2021-06-30T15:12:18.734Z] Command:       C:\PROGRA~1\nodejs\node.exe C:\Users\Mystogun92\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-06-30T15:12:18.735Z] CLI Version:   9.4.0
+[debug] [2021-06-30T15:12:18.735Z] Platform:      win32
+[debug] [2021-06-30T15:12:18.735Z] Node Version:  v14.16.1
+[debug] [2021-06-30T15:12:18.736Z] Time:          Wed Jun 30 2021 16:12:18 GMT+0100 (British Summer Time)
+[debug] [2021-06-30T15:12:18.736Z] ----------------------------------------------------------------------
+[debug] [2021-06-30T15:12:18.736Z] 
+[debug] [2021-06-30T15:12:18.747Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-30T15:12:18.748Z] > authorizing via signed-in user
+[debug] [2021-06-30T15:12:18.748Z] [iam] checking project security-assessment-3e600 for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2021-06-30T15:12:18.751Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-30T15:12:18.751Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

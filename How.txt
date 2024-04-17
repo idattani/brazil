@@ -1,0 +1,18 @@
+For deployment 
+
+
+1. 
+firebase functions:config:set gmail.email="info@cyberseguroglobal.com" gmail.password="cyber22082307"
+
+(didn't need to use sudo  but may need to add if doesn't work)
+
+2. must run
+sudo npm run build  
+
+3.firebase deploy  did not need sudo but may
+
+also  firebase deploy --only functions           did not need sudo!
+
+************************************************************
+OR after 1
+Locally   npm start then look at http://localhost:3000/

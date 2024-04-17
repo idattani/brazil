@@ -1,0 +1,23 @@
+.Question {
+width: 100%;
+margin: 10px auto;
+border: 2px solid #eee;
+box-shadow:0 2px 3px #ccc;
+padding:10px;
+text-align:left;
+
+
+}
+
+#number-block{
+
+    padding:5px;
+    width: 20px;
+    border: 1px solid #25ad1b;
+
+}
+
+
+#p_wrap {
+  white-space: pre-line;
+}

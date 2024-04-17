@@ -1,0 +1,521 @@
+"1 Additional effort is needed in this area. Where appropriate, the governance
+framework should reference existing policies and procedures that are linked to
+personal data processing (for example, the information security policy or the identity
+and access management policy). Likewise, organizational and technical concepts
+and arrangements should be referenced to ensure consistency (for instance, any
+existing data classification schemes or the determination of information asset
+protection levels)." ,
+
+"2 Improvements are needed to your enterprise's processing register. Governance
+elements around a processing register include, but are not limited to:
+Information assets used (from personal data register)
+Purpose(s) of processing
+Business processes or other organizational processes utilizing the assets
+Processing life cycle from initial data acquisition to data deletion (planned or
+ad hoc)
+The governing process around the processing register should further define a role
+or function responsible for maintaining the register, as well as accessibility of the
+register to internal and external reviews. Further governance provisions might
+include the scope and procedure for presenting the register as evidence, both
+internally and externally. In situations where complex processing of large amounts
+of personal data takes place, the register should be governed by a policy or
+appropriate key operating procedure." ,
+
+"3 Your enterprise needs to give further attention to this area. An enterprise should
+establish, maintain, continuously monitor and adapt binding corporate rules that
+adequately and comprehensively reflect the internal and external governance
+framework. Activities in conjunction with BCRs include, but are not limited to:
+Definition, description and approval of BCRs by senior management
+Communication of BCRs on an enterprisewide basis
+Annual or ad hoc validation and updating of BCRs
+Integration of BCRs in third-party contractual relationships
+Monitoring of BCR conformance internally and externally" ,
+
+"4 Your enterprise needs to make enhancements to your rules for consent. At a
+minimum, governance provisions around consent should cover:
+Transparency and enabling information to data subjects
+Types of consent and related requirements
+Withdrawal of consent by data subjects
+Specific processes, controls and verification for child consent, including
+appropriate verification of age and/or parental authority as well as parental
+consent
+Communication channels, simplicity of language and accessibility of
+consent-based interfaces" ,
+
+"5 Your enterprise is only minimally equipped to process data subject requests. At a
+minimum, governance provisions around data subjects’ requests should cover:
+Receiving and documenting data subject requests
+Purpose-related, legal and technical validation of requests
+Formal response, including communications channels and formats
+Interfaces to internal and supply chain processes
+Interface to personal data register and processing register
+Independent review of requests by the DPO function" ,
+
+"6 Your enterprise needs to be better equipped to address data subjects' complaints.
+At a minimum, governance provisions around data subjects’ complaints should
+cover:
+Receipt and initial documentation, including any formal response to
+supervisory authorities
+Complaint analysis, including organizational, legal and technical interfaces
+within the enterprise
+Definition and implementation of remediation where applicable
+Identification of potential gaps or weaknesses leading to the complaint and
+opportunities for improvement",
+
+"7 Your enterprise's governance process to ensure objective oversight needs work.
+Activities in conjunction with impartial oversight include, but are not limited to:
+Organizational roles performing and ensuring impartial oversight
+Roles and responsibilities (RACI), including demonstrated impartiality
+Objectives, scope and extent of oversight activities
+Risk-based frequency of oversight activities
+Procedures and guidance for planning, deploying and reporting",
+
+"8 Additional effort is needed in this area. At a minimum, the following parts of the
+cycle should be defined and implemented:
+Data creation or acquisition, including the personal data processing (supply)
+chain
+Information asset classification, including protection levels and assignment
+to special categories
+Inclusion in the personal data register and the processing register and
+removal from registers
+Actual processing and related controls
+Temporary and permanent storage, including virtualized and cloud storage
+Archiving and aggregation
+Deletion, both planned (end of life or end of purpose) and ad hoc (erasure
+request, etc.)",
+
+"9 Improvements are needed to your enterprise's process to identify and document
+personal data. The identification process should, at a minimum, address the
+following aspects:
+Definition of criteria in accordance with GDPR
+Procedure for analyzing existing data sets, possibly in combination with the
+analysis of security protection levels (CIA)
+Handover procedure to personal data register
+Analysis of potential inference (indirect identification of natural persons) from
+separate and/or dispersed data sets
+Onboarding procedure for new data
+Procedures and controls for third parties" ,
+
+"10 Your enterprise needs to be better equipped to maintain data classification. At a
+minimum, personal data classification should address:
+General attribute of “personal” in accordance with GDPR; wider personal
+relevance as PII if needed
+Specific classification relating to special categories and purposes, including
+limitations and additional security requirements
+Classification in terms of nonrepudiation of transactions involving personal
+data
+Other aspects, such as applicable professional secrecy or restricted access
+criteria" ,
+
+"11 Your enterprise's personal data register needs improvement. At a minimum, the
+personal data register process should address:
+Type of data and aggregation (if any) into information assets
+Relevant links between data sets that form information assets under GDPR
+Data types and formats, including data not held in electronic formats (e.g.,
+paper, microfiche)
+Data location and instantiation, including multiple copies, virtualized and
+cloud images, etc.
+Life cycle and life span information, including planned archiving and deletion
+Linked processing steps, organizational units and processing purposes,
+clearly detailing the when, why, where and by whom of personal data
+processing",
+
+"12 Your enterprise is only minimally equipped to manage special categories data. This
+requires a robust process that identifies, controls and documents any processing of
+data belonging to one or more special categories, covering at a minimum, but not
+limited to:
+Mapping of identified information assets to special categories in accordance
+with GDPR
+Documentation of justifying circumstances (as per GDPR) for each
+information asset
+Documentation of any new or changed classification of such information
+assets
+Documentation of all communications with data subjects or supervisory
+authorities as relating to the information asset
+Documentation of asset-related consent and withdrawal of consent
+Verified links to personal data register and processing register, including
+evidence of processing that is restricted to the defined purpose(s)" ,
+
+"13 Your enterprise may not be prepared to adequately respond to demands for
+erasure. The process should, at a minimum, address the following aspects:
+Receipt, confirmation and analysis of erasure requests by data subjects or
+competent authorities
+Validation and internalization of erasure requests transferred by third parties
+Defined interfaces to other processes, i.e., personal data register and
+processing register, data classification and data life cycle
+Approvals and independent-verification procedures around erasure
+Erasure confirmation and communications procedure (to data subjects or
+authorities)" ,
+
+"14 If you haven't already, your enterprise should conduct a thorough risk evaluation.
+The results of the risk evaluation should include, at a minimum:
+Comprehensive register of events and threats leading to GDPR risk
+categories
+Frequency estimates and precautionary assumptions
+Aggregation and clustering of events leading to the same risks materializing
+Risk classification, usually in accordance with the overarching organizational
+risk classification scheme",
+
+"15 If you haven't already, your enterprise must conduct a thorough data protection
+impact assessment. The DPIA must take into account existing controls and risk
+mitigation measures, and aim at identifying the potential impact resulting from the
+residual risk that has not been or cannot be fully mitigated." ,
+
+"16 Your enterprise should make improvements to better manage risk treatment. The
+risk treatment process should, at a minimum, cover the following:
+Risk avoidance or elimination, including changes to processing
+arrangements or discontinuation of processing (restructure or exit)
+Risk elimination through additional controls or safeguards
+Risk transfer, including restructuring of the personal data supply chain
+Risk reduction through additional controls or mitigation measures
+Risk tolerance, based on the estimated frequency and impact",
+
+"17 Your enterprise should review your risk validation process for deficiencies. At a
+minimum, the risk validation process should address:
+Confirmation (or change) of risk evaluation results, including frequency
+estimates and the event/threat universe
+Review of effectiveness of treatment measures and activities, based on a
+reasonable period of observation
+Review of any incidents or breaches that may have occurred since the last
+validation
+Analysis of any changes to the framework and terms of reference, i.e., in
+respect of any legislative or regulatory, political or financial events" ,
+
+"18 Your enterprise could use some improvement in this area. Anonymization and
+pseudonymization should cover, but are not limited to:
+• Identification of personal data sets to be anonymized/pseudonymized
+• Definition of techniques at all technical levels, e.g., file, database record,
+nonelectronic filing systems
+• Documentation and log of actual anonymization/pseudonymization
+• Defined link to personal data register and processing register
+• Recursive application of the need-to-know principle across the supply chain;
+integration of the actual need to know with identity and access management" ,
+
+"19 The encryption strategy and its components should be based on risk and efficiency,
+making sure that GDPR risks are fully understood and internalized in any decision.
+Your enterprise should make improvements in this area. At a minimum, the
+encryption process should address:
+• Definitive set of personal data and information assets to be encrypted,
+based on the assigned protection levels and the GDPR risk and impact
+• Definition of encryption techniques and targets, e.g., individual data,
+database elements, whole databases, transactions, etc.
+• Links to recognized or approved encryption techniques and tools already in
+use within the enterprise
+• Scope, plan and implementation steps for additional encryption needed for
+personal data" ,
+
+"20 Your enterprise should make enhancements to better manage protection levels. The
+process around protection levels for personal data provides a defined interface
+(both ways) between general information security and personal data security. DPP
+practitioners and enterprises should reflect this by defining appropriate
+organizational interfaces to support the information flow and the adequate
+representation of personal data in protection level analyses." , 
+
+"21 Your enterprise should make improvements to your resilience process. At a
+minimum, the resilience process should cover:
+• Personal data criticality, often expressed as a combination of integrity and
+availability requirements
+• Processing criticality as a function of time, i.e., maximum tolerable period of
+unavailability, maximum tolerable data loss
+• Recovery plans for personal data sets
+• Defined links to general business continuity and IT service continuity plans
+• Backup and restore concepts for personal data sets, linked to overall backup
+and restore plans and procedures
+• Multiple instantiation of personal data sets requiring high availability, i.e.,
+fully resilient processing" ,
+
+"22 Your enterprise needs to more effectively manage access to personal data. Access
+restrictions and limitations resulting from personal data processing requirements
+should be documented and fed into the general IAM process. The access
+management process for personal data therefore provides an interface (both ways)
+to general IAM. DPP practitioners and enterprises should reflect this by defining
+appropriate organizational interfaces to support the information flow and the
+adequate representation of personal data in access management." ,
+
+"23 Your enterprise's process to manage testing and assessment of personal data
+security could use another look. At a minimum, the process should address:
+• Types of test and assessment, e.g., conceptual testing, vulnerability
+scanning and penetration testing
+• Frequency of testing
+• Evidence of continual improvement, i.e., progressively more demanding
+tests and assessments over time
+• Test logging and securing evidence
+• Analysis of weaknesses and documentation of improvement opportunities" ,
+
+"24 Your enterprise's process for managing controllers and processors needs attention.
+The process and processors should cover at least:
+• Identification of primary and joint controllers, including individual or collective
+purpose(s) for processing personal data
+• Identification of processors, including the defined scope and extent of
+processing on behalf of one or more controllers
+• Links to the personal data register, reflecting the data sets and the way they
+are handled across the supply chain (data in flow; data at rest)
+• Links to the processing register, reflecting the processes or process steps
+performed by each actor in the supply chain
+• Documentation of vendor (processor) management and control
+arrangements, often embedded into general vendor management of an
+enterprise" ,
+
+"25 In complex supply chains, the subprocessing management process is an essential
+element of ensuring GDPR conformance across the whole supply chain. Your
+enterprise needs some improvement in this area. The subprocess management
+process should cover, at a minimum:
+• Formal request procedure to primary processors; disclosure of any further
+outsourcing
+• Documentation and register of subprocessing, including scope, extent and
+purpose(s)
+• Evidence of GDPR conformance, including processes, controls, concepts
+and review results
+• Audit reports and other independent assurance, if available
+• Processing agreements between primary processors and subprocessors" ,
+
+"26 Your enterprise's processing agreements need some work. At a minimum, the
+process around these agreements should cover:
+• Definition, approval and roll-out of standardized agreements, including
+templates
+• Monitoring of fulfilment on a regular basis
+• Planning and execution of reviews, primarily under the standard right to
+audit
+• Receipt, analysis and validation of third-party evidence for conformant
+processing, e.g., certification and attestation reports
+• Regular review and updating of processing agreements, terms and
+conditions, in line with legislative and regulatory activity
+• Termination and exit planning for individual contractual relationships" ,
+
+"27 Your enterprise should make enhancements to manage supply chain impact. In a
+supply chain with multiple actors, impacts resulting from GDPR risks may
+materialize at any point and at any time. Therefore, DPP practitioners and
+enterprises should apply their own DPIA approach to all parts of the supply chain
+and document the feedback received from each of the parties. This includes
+standardized reporting as well as ad hoc reviews or plausibility checks. The overall
+impact should then be aggregated, based on the processing register and the flow of
+data across various supply chain participants. Care should be taken in
+understanding how impacts in one place may aggravate impacts in other parts of
+the supply chain." ,
+
+"28 Where personal data processing is performed in a supply chain, internal controls at
+a processor or subprocessor must be as effective as the ones within the controller
+organization. Your enterprise's current supply chain controls process is inadequate.
+At a minimum, the process should cover the following:
+• Obtaining and analyzing internal controls documentation from third parties
+• Mapping to internal control system (ICS) at the controller organization
+• Procedures for test of design (ToD), i.e., standard techniques for evaluating
+controls
+• Procedures for test of effectiveness (ToE), i.e., sampling and collecting
+evidence that demonstrates the effectiveness of controls at third parties
+• Monitoring and log review arrangements, including accessibility of log data
+inasmuch as these relate to personal data processing
+• Point-in-time or continuous audit rights, including audit planning and
+deployment" ,
+
+"29 Your enterprise may not be prepared to manage notification in a timely manner. At a
+minimum, the process of notifying supervisory authorities should include:
+• Information gathering / investigative procedure, outlining the interaction
+between the DPO function and other parts of the enterprise and/or external
+services
+• Standardized reporting package including the minimum GDPR information
+set and appropriate templates" ,
+
+"30 Your enterprise may not be prepared to notify data subjects in event of an incident
+or breach. At a minimum, the process of notifying data subjects should cover:
+• Standardized reporting format and templates, adapted to and optimized for
+various channels of communication (individual, group, public)
+• Predefined and approved key messages expressing the enterprise’s actions
+(investigation, consequences, remediation, improvement, etc.)
+• Organizational responsibilities with regard to formulating and conveying key
+messages, e.g., involvement of the communications department, legal
+advice, etc.
+• Ad hoc communications facilities offered to data subjects, e.g., help line, free
+phone number, dark site, etc." ,
+
+"31 Your enterprise's incident and crisis management process has room for
+improvement. From the perspective of DPP practitioners and organizational units
+initially discovering the breach, the process should cover at least:
+• Description and documentation of known facts and figures, in a standardized
+format where appropriate
+• Defined link to general escalation and alerting process, often defined by the
+business crisis management (BCM) function
+• Predefined generic personal data scenario for business continuity and crisis
+management, similar to other special scenarios such as cyberattack,
+pandemic, etc.
+• Predefined relationships and communications channels with external actors,
+i.e., external services such as investigative or forensics specialists
+• Ongoing communications protocol between organizational line units and
+incident/crisis management teams" ,
+
+"32 Your enterprise should be better prepared to manage evidence and claims
+appropriately. Personal data breaches represent instances of noncompliance but
+also indicate that internal and/or external negligence or criminal activity may have
+been present. The evidence and claims process should therefore cover, at a
+minimum:
+• Defined procedures for collecting and securing evidence, including chain of
+custody
+• Availability of specialized services such as IT forensics
+• Procedure and templates for post incident analysis and reporting
+• Procedure for substantiating claims against third parties, including the legal
+or contractual basis for such claims
+• Procedure for preparing defenses against claims by third parties, including
+aspects of appeal (regulatory decisions)
+• Defined link to post incident DPO reporting" ,
+
+"33 Your enterprise's awareness process needs some work. At a minimum, the
+enterprisewide awareness process should cover:
+• Definition and description of GDPR requirements in day-to-day
+organizational processes, including examples of personal data processing
+• Campaign materials emphasizing specific aspects of DPP, personal data
+processing and GDPR-related points to note
+• Program/project plans setting target dates for awareness measures
+• Third-party awareness materials and details on how to include third parties
+in awareness campaigns" ,
+
+"34 Staff in your enterprise may not be adequately prepared to discharge their duties in
+regards to data protection and privacy matters. Data protection and privacy
+management, including the context of GDPR, require a set of skills and
+qualifications that must be present in the enterprise or contracted through external
+services. The management of skills and education is an essential process to ensure
+that GDPR and its consequences are fully understood. The skills and education
+process should include, but not be limited to:
+• Definition of skills, levels and internal requirements for DPP-related tasks
+and positions
+• Mapping of skills to roles and organizational functions (matrix)
+• Identification of suitable qualification levels and formal qualifications or
+certifications, as needed for each part of the matrix
+• Education paths for different roles and organizational functions in DPP
+• Gathering appropriate educational sources, materials and opportunities for
+guided or self-study" ,
+
+"35 Improvements are needed to your enterprise's training process. Training is an
+important component of overall awareness, providing ongoing learning opportunities
+and reinforcing the key messages around DPP and GDPR. At a minimum, the
+training process should cover:
+• Defined and validated basic GDPR training, preferably mandatory for all
+members of the enterprise
+• Training concept based on the skills and education matrix
+• Training plan, typically on an annual basis, including internal and external
+training opportunities
+• Preparation of training materials, for guided study and self-study
+• Preparatory training aids for higher qualifications in DPP and GDPR,
+including certification exam preparation, etc.
+• Defined external training sources and providers for specific purposes, e.g.,
+legal or DPO training" ,
+
+"36 Your enterprise needs improvement in its the DPO function. At a minimum, the
+process of maintaining and running the DPO should cover the following:
+• Organizational structure and positioning of the DPO function, including the
+DPO office and its points of contact in other parts of the enterprise
+• Design of administrative tasks and processes for the DPO function
+• Design of regular work program in an annual cycle
+• Human resource planning, skills and education needs" ,
+
+"37 Your enterprise has room for improvement in managing the budget and resources of
+the DPO function. The budgeting and resourcing process should at least cover:
+• Annual financial budget cycle, linking into general budgeting
+• Human resource and headcount planning
+• Technical resource planning, including tools, licensing, etc.
+• External service planning and budgeting, e.g., for consultants or legal
+advisors
+• Links to general financial reporting within the enterprise" ,
+
+"38 Your DPO function is not well-represented in the overall enterprise. The
+management process for organizational interfaces should cover at least:
+• Documentation of regular, formal contacts throughout the enterprise
+• DPO participation in standing committees and other formal institutional
+meetings
+• Regular communications between the DPO function and other
+organizational units, including minutes and other reports
+• Documented process steps requiring DPO involvement, including
+consultation and information (RACI)" ,
+
+"39 Formal internal and external reporting is an important part of the DPO function. Your
+enterprise has issues that should be addressed in this area. At a minimum, the
+reporting management process should cover:
+• Reporting schedules for internal and external reporting to and by the DPO
+function
+• Reporting schedules for supervisory authority reporting
+• Procedures specifying report templates, formal content, frequency and
+distribution as well as CIA ratings for reports
+• Tracking procedure for reporting, covering all reporting schedules" ,
+
+"40 Based on your response, your enterprise may encounter difficulties managing
+GDPR conformance and related requirements that are contracted through external
+services. The process for managing external services should address, at a
+minimum:
+• Purpose and substance of external services, including a processing
+agreement
+• Defined and agreed protection level for the services rendered, specifying
+confidentiality, integrity and availability
+• Supplier risk analysis, including in-depth checks and due diligence where
+appropriate
+• Information security analysis
+• Right to audit, analysis of review results and tracking of remedial action
+• Human resource background checking where appropriate and legally
+permitted" ,
+
+"41 Your enterprise's data acquisition controls need improvement. At a minimum, the
+process for managing such controls should address:
+• Identification of organizational processes that may intentionally or
+incidentally acquire personal data
+• Documentation of inbound data flows and data interfaces (i.e., written, web,
+other)
+• Identification of data origin where possible (i.e., direct from data subject,
+controller, processor, other supply chain actors, etc.)
+• Documentation of related controls in the internal controls register" ,
+
+"42 Your enterprise's processing controls need improvement. The process of
+maintaining such controls should cover:
+• Identification of process steps, inputs and outputs that are to be controlled
+• Identification of handover points to third parties, e.g., processors or
+authorities
+• Definition of control objectives and control types (e.g., preventive, detective,
+corrective)
+• Documentation of related controls in the internal controls register" ,
+
+"43 Your enterprise's storage controls need improvement. The process of maintaining
+such controls should cover at least:
+• Identification of storage types and locations for personal data, i.e., storage
+map
+• Analysis of storage instances within the overall IT architecture
+• Identification of external storage instances, e.g., third party, virtualized, cloud
+• Identification and mapping of handover points between core processes (data
+in flow) and storage (data at rest)
+• Documentation of related controls in the internal controls register" , 
+
+"44 Your enterprise's deletion controls need improvement. The process for maintaining
+deletion controls should cover at least:
+• Identification of deletion points within the overall system
+• Mapping of controls prior to deletion
+• Maintaining a deletion log
+• Mapping of controls after deletion
+• Verification of removal from the personal data register
+• Documentation of related controls in the internal controls register" ,
+
+"45 Your enterprise's monitoring controls need improvement. The process for
+maintaining monitoring controls should cover at least:
+• Mapping of personal data processing to overall monitoring, including tools
+• Identification of monitoring needs across the process register
+• Mapping of reporting needs and application to monitoring processes
+• Recurring review of monitoring density and extent
+• Documentation of related controls in the internal controls register" ,
+
+"46 Your enterprise should make improvements to prepare to manage independent
+reviews. Managing independent reviews further requires planning steps similar to
+standard reviews, including notification, fieldwork, analysis and reporting. DPP
+practitioners and enterprises may benefit from leveraging standardized audit and
+review processes for DPP reviews. They should further link to the minimum
+structure and content of DPO reporting as set down in GDPR." ,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

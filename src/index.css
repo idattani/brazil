@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.drop{
+	padding: 0;
+	right: 0px;
+	left:0px;
+	top: 40%;
+	bottom: 0px;
+	margin: 0 auto;
+	width: 25px;
+	height: 25px;		
+	border-radius:0% 100% 100% 100%;
+	-webkit-transform: rotate(224deg);
+	clear: left;
+}

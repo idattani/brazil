@@ -1,0 +1,132 @@
+
+{
+  "rules": {
+    ".read": "auth!=null",
+    ".write": "true"
+  }
+}
+https://stackoverflow.com/questions/58532808/render-google-charts-with-puppeteer
+https://gist.github.com/RakanNimer/327a347411253806e5530544c3a4f7f5
+
+go to visual studio
+choose security-assessment
+NB   Make sure access to less secure apps is turned on on gdpr-for-business
+
+Note: running version is at https://security-assessment-837c6.firebaseapp.com/
+
+Hosting URL: https://security-assessment-837c6.web.app
+
+For quick testing without using function (and mailing) just run
+npm start
+
+but doesn't update functions
+
+For deployment 
+
+
+1. 
+firebase functions:config:set gmail.email="gdpr.for.business@gmail.com" gmail.password="c0l1nbgdpr"
+
+(didn't need to use sudo  but may need to add if doesn't work)
+
+2. must run
+sudo npm run build  
+
+3.firebase deploy  did not need sudo but may
+
+also  firebase deploy --only functions  did not need sudo!
+
+************************************************************
+OR after 1
+Locally  sudo npm start then look at http://localhost:3000/
+
+***************************************************
+https://www.robinwieruch.de/local-storage-react/
+
+To remove localStorage
+
+localStorage.removeItem('currentGame');
+
+Alternatively, you can also clear the whole localStorage with
+
+localStorage.clear();
+*****************************************************************
+to see log for functions (from terminal)
+sudo firebase functions:log
+https://firebase.google.com/docs/functions/writing-and-viewing-logs
+Can also see in firebase console in FUNCTIONS
+*********************************************************************************
+
+https://howtofirebase.com/firebase-cloud-functions-753935e80323
+
+https://howtofirebase.com/save-and-query-firebase-data-ed73fb8c6e3a
+
+
+see https://medium.com/@bensigo/hosting-your-react-app-with-firebase-hosting-add1fa08c214
+
+for how to deploy to firebase
+
+firebase init
+
+database and hosting
+in question about "public2 type build
+single page app
+
+
+
+The project was built assuming it is hosted at the server root.
+You can control this with the homepage field in your package.json.
+For example, add this to build it for GitHub Pages:
+
+  "homepage" : "http://myname.github.io/myapp",
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  http://bit.ly/2vY88Kr
+
+
+had to install npm install nodemailer --save in the functions directory
+Somehow gave project alias dev
+sudo firebase deploy --project dev   sudo firebase deploy --project default
+
+sudo firebase use to see the aliases
+
+I had a similar problem and it turned out that I was deploying to a different alias of the same project. You can have many aliases within a project (i.e. versions of the same project) , but only one alias will be visible to people visiting your site.
+
+Entering firebase use <alias_or_project_id> in terminal will let you set the alias name you'd like to use. To deploy that specific alias, run firebase deploy --project <alias_or_project_id>.
+
+dev  !!
+
+https://medium.com/codingthesmartway-com-blog/introduction-to-firebase-cloud-functions-c220613f0ef
+
+
+
+Also see
+https://medium.com/google-cloud/google-firebase-hosting-custom-domain-the-missing-manual-7f971c3c2d1e
+
+
+for email code look at
+
+https://github.com/firebase/functions-samples/blob/Node-8/email-confirmation/functions/index.js
+
+videos
+
+https://www.youtube.com/watch?v=qcECaRgU4uI
+
+https://www.youtube.com/watch?v=YGsmWKMMiYs      install and write... and google store and spawn
+
+
+https://www.youtube.com/watch?v=qZ1EFnFOGvE&t=185s https triggers Creating a REST Endpoint with Cloud Functions
+
+
+
+
+
+Another good one using express and email (but not firebase) is
+https://www.youtube.com/watch?v=EPnBO8HgyRU&t=165s

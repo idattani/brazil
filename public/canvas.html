@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Image to use:</p>
+
+<img id="risk" width="524.8" height="32" src="./risk graphic.png" alt="Risk" style="display: none;">
+<img id="tick" width="20" height="20" src="./tick-symbol.png" alt="Tick Symbol" style="display: none;">
+<img id="riskGraphic" alt="Risk Graphic" />
+<!-- <img alt="Risk"> -->
+<p>Canvas:</p>
+
+<canvas id="myCanvas" width="526" height="50">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script src="https://unpkg.com/merge-images"></script>
+<script>
+window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("risk");
+    var tick = document.getElementById("tick");
+    ctx.drawImage(img, 0, 18);
+    ctx.drawImage(tick, 468.32, 0);
+    var url = canvas.toDataURL();
+    document.getElementById('riskGraphic').src = url;
+//    mergeImages([{src: './risk graphic.png', x: 0, y: 18}, {src:'./tick-symbol.png', x: 468.32, y: 0}], {width: 524.8, height: 50})
+//   .then(b64 => document.querySelector('img').src = b64);
+};
+</script>
+<!-- 48.48, 153.44, 258.4, 363.36, 468.32 -->
+</body>
+</html>
