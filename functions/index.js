@@ -98,6 +98,7 @@ exports.sendEmailConfirmation = functions.database.ref("/combinedusers/{uid}")
           });
       const userEmail = original.id;
       const userTelephoneNumber = original.telephoneNumber;
+      const referrerTitle = original.referrer.title;
       const userName=capitalizeFirstLetter(original.username);
 
       // The os.tmpdir() method returns string spec. the os's default directory for temporary files.
@@ -197,8 +198,8 @@ exports.sendEmailConfirmation = functions.database.ref("/combinedusers/{uid}")
       //     Author: "I.Dattani",
       //   },
       // });
-      const doc = generateReport(q, dbBlocks, dbHeader, dbFA, dbLA, dbPA, dbNA, titleToUse, fs, compName, userEmail, userTelephoneNumber, userName, companyName, "English");
-      const portugueseReport = generateReport(q, dbBlocksP, dbHeaderP, dbFAP, dbLAP, dbPAP, dbNAP, titleToUseP, fs, compName, userEmail, userTelephoneNumber, userName, companyName, "Portuguese");
+      const doc = generateReport(q, dbBlocks, dbHeader, dbFA, dbLA, dbPA, dbNA, titleToUse, fs, compName, userEmail, userTelephoneNumber, userName, referrerTitle, companyName, "English");
+      const portugueseReport = generateReport(q, dbBlocksP, dbHeaderP, dbFAP, dbLAP, dbPAP, dbNAP, titleToUseP, fs, compName, userEmail, userTelephoneNumber, userName, referrerTitle, companyName, "Portuguese");
       Promise.all([
         Packer.toBuffer(doc),
         Packer.toBuffer(portugueseReport),
@@ -268,7 +269,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const generateReport = (q, dbBlocks, dbHeader, dbFA, dbLA, dbPA, dbNA, titleToUse, fs, compName, userEmail, userTelephoneNumber, userName, companyName, language) => {
+const generateReport = (q, dbBlocks, dbHeader, dbFA, dbLA, dbPA, dbNA, titleToUse, fs, compName, userEmail, userTelephoneNumber, userName, referrerTitle, companyName, language) => {
   const sectionOneQuestionAnswers = [];
   const sectionTwoQuestionAnswers = [];
   const sectionThreeQuestionAnswers = [];
@@ -664,6 +665,18 @@ const generateReport = (q, dbBlocks, dbHeader, dbFA, dbLA, dbPA, dbNA, titleToUs
             children: [
               new TextRun({
                 text: userTelephoneNumber,
+              }),
+            ],
+            style: "times",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: referrerTitle,
               }),
             ],
             style: "times",
@@ -1114,6 +1127,7 @@ exports.sendEmailConfirmationSecurity = functions.database.ref("/combinedusers/{
           });
       const userEmail = after.id;
       const userTelephoneNumber = after.telephoneNumber;
+      const referrerTitle = after.referrer.title;
       // console.log("in function sendEmailConfirmationSecurity ");
 
       // console.log( 'before.latestscore ' + before.latestscore)
@@ -1480,8 +1494,8 @@ exports.sendEmailConfirmationSecurity = functions.database.ref("/combinedusers/{
           indicesToPrint=[17, 18, 19, 20];
         }
 
-        const doc = generateSecurityReport(titleToUse, fs, "SYSTEM SECURITY ASSESSMENT", whatToWrite, gaugeText, test, classifyText, capitalised, compName, "User Details", userEmail, userTelephoneNumber, "Question", "Answer", q_E, ans_E, q, "OVERALL GUIDANCE FOR " + companyName.toUpperCase(), responseArray, indicesToPrint);
-        const portugueseReport = generateSecurityReport(titleToUseP, fs, "AVALIAÇÃO DE SEGURANÇA DO SISTEMA", whatToWriteP, gaugeTextP, testP, classifyTextP, capitalised, compName, "Detalhes do Usuário", userEmail, userTelephoneNumber, "Pergunta", "Resposta", q_P, ans_P, q, "ORIENTAÇÃO GERAL PARA " + companyName.toUpperCase(), responseArrayP, indicesToPrint);
+        const doc = generateSecurityReport(titleToUse, fs, "SYSTEM SECURITY ASSESSMENT", whatToWrite, gaugeText, test, classifyText, capitalised, compName, "User Details", userEmail, userTelephoneNumber, referrerTitle, "Question", "Answer", q_E, ans_E, q, "OVERALL GUIDANCE FOR " + companyName.toUpperCase(), responseArray, indicesToPrint);
+        const portugueseReport = generateSecurityReport(titleToUseP, fs, "AVALIAÇÃO DE SEGURANÇA DO SISTEMA", whatToWriteP, gaugeTextP, testP, classifyTextP, capitalised, compName, "Detalhes do Usuário", userEmail, userTelephoneNumber, referrerTitle, "Pergunta", "Resposta", q_P, ans_P, q, "ORIENTAÇÃO GERAL PARA " + companyName.toUpperCase(), responseArrayP, indicesToPrint);
 
         Promise.all([
           Packer.toBuffer(doc),
@@ -1587,7 +1601,7 @@ function removeDuplicates(array) {
   return array.filter((a, b) => array.indexOf(a) === b);
 }
 
-const generateSecurityReport = (titleToUse, fs, title, whatToWrite, gaugeText, test, classifyText, capitalised, compName, userDetailsTitle, userEmail, userTelephoneNumber, questionHeader, answerHeader, q_E, ans_E, q, overallGuidanceTitle, responseArray, indicesToPrint) => {
+const generateSecurityReport = (titleToUse, fs, title, whatToWrite, gaugeText, test, classifyText, capitalised, compName, userDetailsTitle, userEmail, userTelephoneNumber, referrerTitle, questionHeader, answerHeader, q_E, ans_E, q, overallGuidanceTitle, responseArray, indicesToPrint) => {
   const doc = new Document({
     creator: "I.Dattani",
     title: titleToUse,
@@ -1809,6 +1823,18 @@ const generateSecurityReport = (titleToUse, fs, title, whatToWrite, gaugeText, t
             children: [
               new TextRun({
                 text: userTelephoneNumber,
+              }),
+            ],
+            style: "times",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: referrerTitle,
               }),
             ],
             style: "times",
@@ -3633,6 +3659,7 @@ exports.sendCyberInsuranceEmail = functions.https.onCall(async (data, context) =
 
     const email = existingUser.email;
     const telephoneNumber = existingUser.telephoneNumber;
+    const referrerTitle = existingUser.referrer.title;
     const username = capitalizeFirstLetter(existingUser.fullName);
 
     const path = require("path");
@@ -3654,8 +3681,8 @@ exports.sendCyberInsuranceEmail = functions.https.onCall(async (data, context) =
       }],
     };
 
-    const report = generateCyberInsuranceReport("Cyber Insurance Application", compName, username, email, telephoneNumber, sections.english, answers[0], fs, "User Details");
-    const portugueseReport = generateCyberInsuranceReport("Aplicativos de Segurança Cibernética", compName, username, email, telephoneNumber, sections.portuguese, answers[0], fs, "Detalhes do Usuário");
+    const report = generateCyberInsuranceReport("Cyber Insurance Application", compName, username, email, telephoneNumber, referrerTitle, sections.english, answers[0], fs, "User Details");
+    const portugueseReport = generateCyberInsuranceReport("Aplicativos de Segurança Cibernética", compName, username, email, telephoneNumber, referrerTitle, sections.portuguese, answers[0], fs, "Detalhes do Usuário");
 
     Promise.all([
       Packer.toBuffer(report),
@@ -3704,7 +3731,7 @@ const yesNoAnswer = (answer, language) => {
   return answer === 1 ? "Yes" : "No";
 };
 
-const generateCyberInsuranceReport = (title, companyName, username, email, telephoneNumber, sections, client, fs, userDetailsTitle) => {
+const generateCyberInsuranceReport = (title, companyName, username, email, telephoneNumber, referrerTitle, sections, client, fs, userDetailsTitle) => {
   const doc = new Document({
     creator: "I.Dattani",
     title: title,
@@ -3897,6 +3924,18 @@ const generateCyberInsuranceReport = (title, companyName, username, email, telep
             children: [
               new TextRun({
                 text: telephoneNumber,
+              }),
+            ],
+            style: "times",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: referrerTitle,
               }),
             ],
             style: "times",

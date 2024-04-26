@@ -164,7 +164,23 @@ class SignInForm extends Component {
     i18n.changeLanguage(childData.language);
     //this.setState({language:childData.language, userExists:true})
     console.error(" language.............************88" +  childData.language)
-    history.push(routes.LANDING);
+    const db = firebase.firestore();
+    const $userRef = db.collection("users").doc(userId);
+    $userRef.get().then((firestoreUserRef) => {
+      if (firestoreUserRef.exists) {
+        console.log('firestore data', firestoreUserRef.data());
+        if (firestoreUserRef.data().isCyberInsuranceApplicationCompleted){
+          history.push(routes.LANDING);
+        } else {
+          history.push(routes.CYBER_INSURANCE);
+        }
+      } else {
+        console.log('User does not exist');
+        history.push(routes.CYBER_INSURANCE);
+      }
+      
+     }).catch((error) => console.error('error', error));
+    
   // {childData.language=== "English"?
   // history.push(routes.LANDING):""};   //HOME  SELECTION
   // {childData.language=== "Portugese"?

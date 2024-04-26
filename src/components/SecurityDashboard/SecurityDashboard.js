@@ -645,7 +645,7 @@ const SecurityDashboardPage = ({history}) => {
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                     <div>
                         {
-                            user && user.securityRiskScore &&
+                            (user && user.securityRiskScore > -1) &&
                             <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
                                 <div style={{alignSelf: 'center'}}>
                                     <p>{t('Cyber Security Residual Risk')}</p>

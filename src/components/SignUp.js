@@ -15,10 +15,16 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
+import { Helmet } from 'react-helmet';
+
 import { COUNTRIES } from '../constants/countries.js';
+import { REFERRERS } from '../constants/referrers.js';
 
 const db = firebase.firestore();
 
@@ -34,6 +40,10 @@ const styles = (theme) => ({
 		margin: theme.spacing(1),
 		backgroundColor: theme.palette.secondary.main
 	},
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: '100%',
+  },
 	form: {
 		width: '100%', // Fix IE 11 issue.
 		marginTop: theme.spacing(3)
@@ -165,6 +175,7 @@ class SignUpForm extends Component {
       currentBlock,
       language,
       country,
+      referrer,
       companySize
       } = this.state;
 
@@ -211,7 +222,8 @@ class SignUpForm extends Component {
         currentBlock:currentBlock,
         language:language,
         companySize,
-        country,
+        country: 'Brazil',
+        referrer,
         isAdmin: false,
         }
 
@@ -231,7 +243,8 @@ class SignUpForm extends Component {
     language,
     companySize,
     email,
-    country,
+    country: 'Brazil',
+    referrer,
     password: passwordOne,
     isPrivacySurveyCompleted: false,
     isSecuritySurveyCompleted: false,
@@ -285,7 +298,7 @@ else {
     console.log("childData.language   ........" +childData.language)
     //this.setState({language:childData.language, userExists:true})
     console.error(" language.............************88" +  childData.language)
-    history.push(routes.LANDING);
+    history.push(routes.CYBER_INSURANCE);
   // {childData.language=== "English"?
   // history.push(routes.LANDING):""};   //HOME  SELECTION
   // {childData.language=== "Portugese"?
@@ -339,7 +352,9 @@ else {
     const { t } = this.props;
     return (<div style={{color: '#02397f'}}>
        {/* <MyComponent   setMyLanguage={this.setMyLanguage}/> */}
-
+       <Helmet>
+        <title>CyberSeguro | {t('Sign Up')}</title>
+      </Helmet>
       <Container component="main" maxWidth="xs">
 				<CssBaseline />
 				<div className={classes.paper}>
@@ -433,36 +448,42 @@ else {
 								/>
 							</Grid>
               <Grid item xs={12}>
-								<Select
-                  variant="outlined"
-                  required
-                  fullWidth
-                  name="country"
-                  label={t("Country")}
-                  id="country"
-                  onChange={event => this.setState(byPropKey('country', event.target.value))}
-                >
-                  {
-                    COUNTRIES.map(country => {
-                      return <MenuItem value={country} key={country}>{country}</MenuItem>
-                    })
-                  }
-                </Select>
+                <FormControl required variant="outlined" style={{minWidth: '100%'}}>
+                  <InputLabel id="referrer-size-label">{t("Referred From")}</InputLabel>
+                  <Select
+                    variant="outlined"
+                    fullWidth
+                    labelId="referrer-size-label"
+                    label={t("Referred From")}
+                    name="referrer"
+                    id="referrer"
+                    onChange={event => this.setState(byPropKey('referrer', event.target.value))}
+                  >
+                    {
+                      REFERRERS.map(referrer => {
+                        return <MenuItem value={referrer} key={referrer.title}>{referrer.title}</MenuItem>
+                      })
+                    }
+                  </Select>
+                </FormControl>
 							</Grid>
               <Grid item xs={12}>
-                <Select
-                  variant="outlined"
-                  required
-                  fullWidth
-                  name="companySize"
-                  label={t("Company Size")}
-                  id="companySize"
-                  onChange={event => this.setState(byPropKey('companySize', event.target.value))}
-                >
-                  <MenuItem value={'small'}>Small</MenuItem>
-                  <MenuItem value={'medium'}>Medium</MenuItem>
-                  <MenuItem value={'large'}>Large</MenuItem>
-                </Select>
+                <FormControl required variant="outlined" style={{minWidth: '100%'}}>
+                  <InputLabel id="company-size-label">{t("Company Size")}</InputLabel>
+                  <Select
+                    variant="outlined"
+                    fullWidth
+                    labelId="company-size-label"
+                    name="companySize"
+                    label={t("Company Size")}
+                    id="companySize"
+                    onChange={event => this.setState(byPropKey('companySize', event.target.value))}
+                  >
+                    <MenuItem value={'small'}>Small</MenuItem>
+                    <MenuItem value={'medium'}>Medium</MenuItem>
+                    <MenuItem value={'large'}>Large</MenuItem>
+                  </Select>
+                </FormControl>
 							</Grid>
 						</Grid>
 						<Button

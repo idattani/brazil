@@ -1,5 +1,5 @@
 import React , { Component }from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import AuthUserContext from './AuthUserContext';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -227,6 +227,11 @@ render() {
     const { t } = useTranslation();
     const firestoreUser = props.firestoreUser;
     const history = useHistory();
+    console.log('firestoreUser', firestoreUser);
+    if (firestoreUser) {
+      console.log('isCyberInsuranceApplicationCompleted',firestoreUser.isCyberInsuranceApplicationCompleted);
+    }
+    
     
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -324,9 +329,9 @@ render() {
         <MenuItem style={{color: "#23ae13"}} onClick={() => handleNavigation(routes.HOMESECURITY)}>
           <SecurityIcon />{t('Security')}
         </MenuItem>
-        <MenuItem style={{color: "#23ae13"}} onClick={() => handleNavigation(routes.CYBER_INSURANCE)}>
+        {/* <MenuItem style={{color: "#23ae13"}} onClick={() => handleNavigation(routes.CYBER_INSURANCE)}>
           <VerifiedUserIcon />{t('Cyber Insurance Application')}
-        </MenuItem>
+        </MenuItem> */}
         {
           firestoreUser && firestoreUser.isPrivacySurveyCompleted && firestoreUser.isSecuritySurveyCompleted &&
           <MenuItem style={{color: "#23ae13"}} onClick={() => handleNavigation(routes.DASHBOARD)}>
@@ -412,36 +417,40 @@ render() {
     return(
     <div className={classes.grow}>
       <AppBar position="static" style={{backgroundImage: 'url(rain-backdrop-rotated.jpeg)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-        <Toolbar style={{minHeight: '75px', color: '#23ae13'}}>
-          <div>
-            <img id="logo" src={require('./cyberseguro2.png')}  alt="Cyber Seguro" width={"150"}/>
-          </div>
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop} style={{justifyContent: 'space-around'}}>
-            <div style={{padding: '5px', cursor: 'pointer'}} aria-label="Assessments" aria-controls={menuId} aria-haspopup="true" onMouseOver={handleAssessmentMenuOpen}>
-              <AssessmentMenuItem />
+          <Toolbar style={{minHeight: '75px', color: '#23ae13'}}>
+            <div>
+              <img id="logo" src={require('./cyberseguro2.png')}  alt="Cyber Seguro" width={"150"}/>
             </div>
-            <div style={{padding: '5px', cursor: 'pointer'}} aria-label="Assessments" aria-controls={menuId} aria-haspopup="true" onMouseOver={handleAdministrationMenuOpen}>
-              <SettingsIcon /> {t('Administration')}
-            </div>
-            <div style={{padding: '5px'}}>
-              <Link style={{color: "#23ae13"}} to="#" onClick={() => auth.doSignOut()}>
-                <ExitToAppIcon/> {t('Sign Out')}
-              </Link>
-            </div>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
+            <div className={classes.grow} />
+            {firestoreUser && firestoreUser.isCyberInsuranceApplicationCompleted &&
+              <div>
+                <div className={classes.sectionDesktop} style={{justifyContent: 'space-around'}}>
+                  <div style={{padding: '5px', cursor: 'pointer'}} aria-label="Assessments" aria-controls={menuId} aria-haspopup="true" onMouseOver={handleAssessmentMenuOpen}>
+                    <AssessmentMenuItem />
+                  </div>
+                  <div style={{padding: '5px', cursor: 'pointer'}} aria-label="Assessments" aria-controls={menuId} aria-haspopup="true" onMouseOver={handleAdministrationMenuOpen}>
+                    <SettingsIcon /> {t('Administration')}
+                  </div>
+                  <div style={{padding: '5px'}}>
+                    <Link style={{color: "#23ae13"}} to="#" onClick={() => auth.doSignOut()}>
+                      <ExitToAppIcon/> {t('Sign Out')}
+                    </Link>
+                  </div>
+                </div>
+                <div className={classes.sectionMobile}>
+                  <IconButton
+                    aria-label="show more"
+                    aria-controls={mobileMenuId}
+                    aria-haspopup="true"
+                    onClick={handleMobileMenuOpen}
+                    color="inherit"
+                  >
+                    <MoreIcon />
+                  </IconButton>
+                </div>
+              </div>
+            }
+          </Toolbar>
       </AppBar>
       {renderAssessmentDialog}
       {renderMobileMenu}

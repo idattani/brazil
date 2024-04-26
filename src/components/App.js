@@ -114,32 +114,32 @@ render()
         {/* <hr/> */}
         <div>
           {/* <ResponsiveAppBar /> */}
-        <Navigation>
-        
-        <Route exact path={routes.ROOT} component={() => <LandingPage />} />
-        <Route exact path={routes.LANDING} component={() => <LandingPage />} />
-        <Route exact path={routes.LANDINGPORTUGESE} component={() => <LandingPagePortugese />} />
-        <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
-        <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
-        <Route exact path={routes.PASSWORD_FORGET} component={() => <PasswordForgetPage />} />
-        <Route exact path={routes.REPOSITORY} component={() => <RepositoryPage />} />
-        <Route exact path={routes.HOME} component={() => <HomePage />} />
-        <Route exact path={routes.HOMESECURITY} component={() => <HomeSecurityPage />} />
-        <Route exact path={routes.CYBER_INSURANCE} component={() => <CyberInsurancePage />} />
-        <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
-        <Route exact path={routes.FAQS} component={() => <FAQs />} />
-        <Route exact path={routes.RESOURCES} component={() => <Resources />} />
-        <Route exact path={routes.SELECTION} component={() => <SelectionPage />} />
-        <Route exact path={routes.GLOSSARY} component={() => <GlossaryPage />} />
-        <Route exact path={routes.DASHBOARD} component={() => <DashboardPage />} />
-        <Route exact path={routes.PRIVACY_DASHBOARD} component={() => <PrivacyAndDataProtectionDashboardPage />} />
-        <Route exact path={routes.SECURITY_DASHBOARD} component={() => <SecurityDashboardPage />} />
-        <Route exact path={routes.FURTHER_INSIGHTS} component={()=> <FurtherInsights />} />
-        <Route exact path={routes.ADMIN_DASHBOARD} component={()=> <AdminDashboard />} />
-        <Route exact path={routes.ADMIN_PRIVACY} component={()=> <AdminPrivacyAndDataProtectionDashboardPage />} />
-        <Route exact path={routes.ADMIN_SECURITY} component={()=> <AdminSecurityDashboardPage />} />
+          <Navigation>
+          
+            <Route exact path={routes.ROOT} component={() => <LandingPage />} />
+            <Route exact path={routes.LANDING} component={() => <LandingPage />} />
+            <Route exact path={routes.LANDINGPORTUGESE} component={() => <LandingPagePortugese />} />
+            <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
+            <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
+            <Route exact path={routes.PASSWORD_FORGET} component={() => <PasswordForgetPage />} />
+            <Route exact path={routes.REPOSITORY} component={() => <RepositoryPage />} />
+            <Route exact path={routes.HOME} component={() => <HomePage />} />
+            <Route exact path={routes.HOMESECURITY} component={() => <HomeSecurityPage />} />
+            <Route exact path={routes.CYBER_INSURANCE} component={() => <CyberInsurancePage />} />
+            <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
+            <Route exact path={routes.FAQS} component={() => <FAQs />} />
+            <Route exact path={routes.RESOURCES} component={() => <Resources />} />
+            <Route exact path={routes.SELECTION} component={() => <SelectionPage />} />
+            <Route exact path={routes.GLOSSARY} component={() => <GlossaryPage />} />
+            <Route exact path={routes.DASHBOARD} component={() => <DashboardPage />} />
+            <Route exact path={routes.PRIVACY_DASHBOARD} component={() => <PrivacyAndDataProtectionDashboardPage />} />
+            <Route exact path={routes.SECURITY_DASHBOARD} component={() => <SecurityDashboardPage />} />
+            <Route exact path={routes.FURTHER_INSIGHTS} component={()=> <FurtherInsights />} />
+            <Route exact path={routes.ADMIN_DASHBOARD} component={()=> <AdminDashboard />} />
+            <Route exact path={routes.ADMIN_PRIVACY} component={()=> <AdminPrivacyAndDataProtectionDashboardPage />} />
+            <Route exact path={routes.ADMIN_SECURITY} component={()=> <AdminSecurityDashboardPage />} />
 
-        </Navigation>
+          </Navigation>
 
         </div>
     </Router>

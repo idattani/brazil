@@ -19,6 +19,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 
+import { Helmet } from 'react-helmet';
+
 const db = firebase.firestore();
 
 const pageStyle = {
@@ -232,6 +234,7 @@ saveHandler=(e)=> {
 
 finishedHandler= (e) => {
 e.preventDefault();
+this.saveHandler(e);
 const h=this.state.history;
 const { t } = this.props;
 
@@ -480,21 +483,23 @@ if (this.state.externalData === null) { return (
     return (
 
 // removed from below
-
     <div style={{display: 'flex', flexFlow: 'wrap', alignItems: 'center', justifyContent:'center'}}>
       {/* <Stepper /> */}
+      <Helmet>
+        <title>CyberSeguro | {t('cyber_insurance_application.title')}</title>
+      </Helmet>
     <div style= {pageStyle} >
     <h2 style={inlineHeader}>{t('cyber_insurance_application.title')}</h2>
     <Grid container spacing={3} style={{marginTop: '10px'}}>
       <Grid item xs={12} sm={3}>
-        {this.state.currentQuestion < 11 ?"":<Button style={{color: 'white'}} variant="contained" color="primary" onClick={this.saveHandler}>
+        {/* {this.state.currentQuestion < 11 ?"":<Button style={{color: 'white'}} variant="contained" color="primary" onClick={this.saveHandler}>
           {t('Save Your Answers')}
-        </Button>}
+        </Button>} */}
       </Grid>
       <Grid item xs={12} sm={this.state.currentQuestion === 11 ? 6 : 3}>
-        {this.state.currentQuestion===0 || this.state.currentQuestion === 11 ?"":<Button style={{color: 'white'}} variant="contained" color="primary" onClick={this.saveHandler}>
+        {/* {this.state.currentQuestion===0 || this.state.currentQuestion === 11 ?"":<Button style={{color: 'white'}} variant="contained" color="primary" onClick={this.saveHandler}>
           {t('Save Your Answers')}
-        </Button>}
+        </Button>} */}
         <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
           {this.state.currentQuestion < 11?"":<Button style={{color: 'white'}} onClick={this.previousQuestionHandler}><NavigateBeforeIcon />{t('Previous Question')}</Button>}
           {this.state.currentQuestion <= 11?"":<Button style={{color: 'white'}} onClick={this.nextQuestionHandler}>{t('Next Question')}<NavigateNextIcon /></Button>}

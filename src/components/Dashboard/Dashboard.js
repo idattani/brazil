@@ -196,7 +196,7 @@ const DashboardPage = () => {
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginBottom: '25px'}}>
                     <h5>{t('Cyber Security')}</h5>
                     {
-                        user && user.securityRiskScore &&
+                        (user && user.securityRiskScore > -1) &&
                         <p style={{color: 'black'}}>{t('Cyber Security Residual Risk')} = {100 - user.securityRiskScore}%</p>
                     }
                     <div style={{height: '50%', display: 'flex', justifyContent: 'center'}}>
